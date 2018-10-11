@@ -124,8 +124,9 @@ export default class MouseBackend {
     this.moveStartSourceIds = []
   }
 
-  handleMoveStart (sourceId) {
+  handleMoveStart (sourceId, event) {
     this.moveStartSourceIds.unshift(sourceId)
+    event.preventDefault()
   }
 
   handleWindowMoveStart(e) {
